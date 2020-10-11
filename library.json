@@ -1,0 +1,34 @@
+{
+  "name": "PoolReader",
+  "keywords": "onewire, 1-wire, bus, sensor, temperature, ORP, Ph, waterlevel",
+  "description": "Arduino Library for measuring Ph, ORP, waterlevel and temperature usign a custom 1-Wire board",
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/willena/Aduino-PoolReader-Library"
+  },
+  "authors": 
+  [
+    {
+      "name": "Villena Guillaume",
+      "email": "guillaume@villena.me",
+      "url": "http://guillaumevillena.fr/",
+      "maintainer": true
+    },
+  ],
+  "dependencies": [
+	{
+		"name": "OneWire",
+		"authors": "Paul Stoffregen",
+		"frameworks": "arduino"
+	},
+	{
+		"name": "OneWireHub",
+		"frameworks": "Arduino",
+		"authors": "Ingmar Splitt"
+	}
+  ],
+  "version": "1.0.0",
+  "frameworks": "arduino",
+  "platforms": "*"
+}

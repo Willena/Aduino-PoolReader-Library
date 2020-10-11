@@ -1,0 +1,47 @@
+#######################################
+# Syntax Coloring Map For PoolReader
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+PoolReader				KEYWORD1		
+PoolReaderDevice		KEYWORD1
+pool_reader_register_t	KEYWORD1
+pool_reader_address_t	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+begin                   KEYWORD2
+read                    KEYWORD2
+getTemperatureRaw       KEYWORD2
+getPhRaw                KEYWORD2
+getOrpRaw               KEYWORD2
+getWaterLevelRaw        KEYWORD2
+getTemperature          KEYWORD2
+getPh                   KEYWORD2
+getWaterLevel           KEYWORD2
+getOrp                  KEYWORD2
+writeSampleInterval     KEYWORD2
+setTemperatureRaw       KEYWORD2
+setPhRaw                KEYWORD2
+setOrpRaw               KEYWORD2
+setWaterLevelRaw        KEYWORD2
+setSampleInterval       KEYWORD2
+setTemperature          KEYWORD2
+setPh                   KEYWORD2
+setOrp                  KEYWORD2
+setWaterLevel           KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
+POOL_READER_COMMAND_READ                  LITERAL1
+POOL_READER_COMMAND_SAMPLE_TIME           LITERAL1
+POOL_READER_RESPONSE_OK                   LITERAL1
+POOL_READER_RESPONSE_NOK                  LITERAL1
+family_code                               LITERAL1
