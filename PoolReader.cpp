@@ -84,6 +84,13 @@ bool PoolReader::readBus(uint8_t * dest, uint8_t len){
   return true;
 }
 
+
+void PoolReader::setCalibrationValue(float temperature, float bufferValue, uint16_t adcValue){
+  calibrationData.cal_temp = temperature;
+  calibrationData.cal_ph_buffer = bufferValue;
+  calibrationData.cal_mv_value = ((adcValue * ADC_STEP_V) / PROBE_AMP_GAIN) - PROBE_SWING_HALF;	
+}
+
 bool PoolReader::read(){
   
   if (!hasAddr && ow == NULL) return false;
@@ -155,7 +162,11 @@ float PoolReader::getTemperature() const{
 }
 
 float PoolReader::getPh() const{
-  return getPhRaw() / 73.0f;
+	
+  float pHmV = ((getPhRaw() * ADC_STEP_V) / PROBE_AMP_GAIN) - PROBE_SWING_HALF;
+  float pH = calibrationData.cal_ph_buffer + (( ( calibrationData.cal_mv_value + pHmV ) * FARADAY_CST ) / ( GAS_CST * (ZERO_C_K*calibrationData.cal_temp)*log(10)));
+	
+  return pH;
 }
 
 float PoolReader::getWaterLevel() const{
