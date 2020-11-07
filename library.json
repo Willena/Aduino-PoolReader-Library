@@ -14,7 +14,7 @@
       "email": "guillaume@villena.me",
       "url": "http://guillaumevillena.fr/",
       "maintainer": true
-    },
+    }
   ],
   "dependencies": [
 	{

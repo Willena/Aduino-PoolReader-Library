@@ -40,7 +40,6 @@ void PoolReaderClient::begin()
     {
       //If address not specified try to find the first one return false if could not find a device
       pool_reader_address_t address;
-      uint8_t count = 0;
 
       ow->reset_search();
       while (ow->search(address))
