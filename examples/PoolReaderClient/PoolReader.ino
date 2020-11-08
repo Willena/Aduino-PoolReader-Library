@@ -31,6 +31,7 @@ void loop()
 
   Serial.println("Temp: " + String(reader.getTemperature()));
   Serial.println("Ph  : " + String(reader.getPh()));
+  Serial.println("Ph 27°C : " + String(reader.getPh(27.0)));
   Serial.println("Ph Raw : " + String(reader.getPhRaw()));
   Serial.println("WL  : " + String(reader.getWaterLevel()));
   Serial.println("ORP : " + String(reader.getOrp()));
